@@ -1,0 +1,32 @@
+.error2 {
+  flex: 1 1 auto;
+  position: relative;
+  background-color: rgb(33, 33, 33);
+}
+
+.error-text {
+  position: absolute;
+  inset: 0;
+  background: #cc810a;
+  color: rgb(3, 3, 3);
+  font-size: 10rem;
+  right: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  mix-blend-mode: screen;
+  -webkit-mask-image: url(../assets/projects/i3.png);
+  mask-image: url(../assets/projects/i3.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.error-blot {
+  position: absolute;
+  inset: 0;
+  background-color: rgb(33, 33, 33);
+}

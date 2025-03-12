@@ -1,0 +1,48 @@
+.error-main {
+  flex: 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.error-rain {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  color: #cc810a;
+  font-size: 2rem;
+  top: 0;
+  left: 0;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  animation: animate-heart 5 linear forwards;
+}
+@keyframes animate-heart {
+  0% {
+    top: 2rem;
+    opacity: 1;
+  }
+  70% {
+    top: 98%;
+    opacity: 1;
+  }
+  72% {
+    top: 98%;
+  }
+  100% {
+    top: 2rem;
+    opacity: 0;
+  }
+}
+.countdown {
+  font-size: 5rem;
+  z-index: 10;
+  color: #c0c0c0;
+}

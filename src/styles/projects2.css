@@ -1,0 +1,84 @@
+/* From Uiverse.io by ilkhoeri */
+
+.wrapper {
+  flex: 1 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transform: translateY(-5vh);
+}
+.wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  filter: grayscale(20%);
+  width: 100%;
+  height: 45vh;
+  background: url("../assets/portfolio-foto/dots2.png") no-repeat center/contain;
+  z-index: -1;
+}
+.inner {
+  --w: min(30vw, 30vh);
+  --h: min(45vw, 45vh);
+  --translateZ: calc((var(--w) + var(--h)) / 2);
+  --rotateX: -15deg;
+  --perspective: 200rem;
+
+  position: absolute;
+  width: var(--w);
+  height: var(--h);
+  transform-style: preserve-3d;
+  transform: perspective(var(--perspective));
+  animation: rotating 20s linear infinite;
+}
+
+.card {
+  position: absolute;
+  border: 2px solid rgb(3, 3, 3);
+  border-radius: 1rem;
+  overflow: hidden;
+  inset: 0;
+  transform: rotateY(calc((360deg / var(--quantity)) * var(--index)))
+    translateZ(var(--translateZ));
+}
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  mix-blend-mode: screen;
+  filter: grayscale(80%);
+  &:hover {
+    opacity: 1;
+    filter: none;
+  }
+}
+.img1 {
+  background: url("../assets/projects/1.png") center/cover;
+}
+.img2 {
+  background: url("../assets/projects/2.png") center/cover;
+}
+.img3 {
+  background: url("../assets/projects/3.png") center/cover;
+}
+.img4 {
+  background: url("../assets/projects/4.png") left/cover;
+}
+.img5 {
+  background: url("../assets/projects/5.png") center/cover;
+}
+
+@keyframes rotating {
+  from {
+    transform: perspective(var(--perspective)) rotateX(var(--rotateX))
+      rotateY(0);
+  }
+  to {
+    transform: perspective(var(--perspective)) rotateX(var(--rotateX))
+      rotateY(1turn);
+  }
+}

@@ -1,0 +1,78 @@
+.project-container {
+  flex: 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: rgb(33, 33, 33);
+}
+
+.project-card {
+  position: relative;
+  width: 100%;
+  max-width: 33%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.bright-image-1:hover,
+.bright-image-2:hover,
+.bright-image-3:hover,
+.bright-image-4:hover {
+  filter: none;
+  transform: scale(1.2);
+}
+/* Individual project cards */
+.bright-image-1,
+.bright-image-2,
+.bright-image-3,
+.bright-image-4 {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  filter: grayscale(80%) blur(1px);
+}
+
+.bright-image-1 {
+  background: url(../assets/projects/2.png) no-repeat center/cover;
+  -webkit-mask-image: url(../assets/projects/i1.png);
+  mask-image: url(../assets/projects/i1.png);
+}
+
+.bright-image-2 {
+  background: url(../assets/projects/3.png) no-repeat center/cover;
+  -webkit-mask-image: url(../assets/projects/i2.png);
+  mask-image: url(../assets/projects/i2.png);
+}
+
+.bright-image-3 {
+  background: url(../assets/projects/4.png) no-repeat center/cover;
+  -webkit-mask-image: url(../assets/projects/i3.png);
+  mask-image: url(../assets/projects/i3.png);
+}
+
+.bright-image-4 {
+  background: url(../assets/projects/5.png) no-repeat center/cover;
+  -webkit-mask-image: url(../assets/projects/i4.png);
+  mask-image: url(../assets/projects/i4.png);
+}
+
+.blot-mask {
+  position: absolute;
+  inset: 0;
+  background-color: rgb(33, 33, 33);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .project-card {
+    max-width: 90%;
+  }
+}
