@@ -41,57 +41,58 @@ const About = () => {
           src="src/assets/portfolio-foto/main2.png"
           alt="portfolio-foto"
         />
-      </div>
-      <div className="quote-div">
-        <p>
-          Hallo I'm Maryna. I'm a Web-Developer. I'm very passionate and
-          dedicated to my work.
-        </p>
-        <blockquote>
-          <p>
-            <q>Growing old is mandatory, but growing up is optional.</q>
-          </p>
-          <p>
-            <em>—Walt Disney</em>
-          </p>
-        </blockquote>
-      </div>
-      {/* </div> */}
-      <div className="cv">
-        <a
-          href={cvLinks[lang]}
-          className="cv-button"
-          download={`cv-${lang}.pdf`}
-          target="_blank"
-          rel="noopener noreferrer"
-          alt="cv download"
-        >
-          <MdDownload className="download-icon" />
-        </a>
-        <div className="radio-input">
-          <input
-            defaultChecked
-            className="input"
-            id="en"
-            type="radio"
-            name="radio"
-            onChange={() => handleLanguageChange("en")}
-          />
-          <input
-            className="input"
-            id="de"
-            type="radio"
-            name="radio"
-            onChange={() => handleLanguageChange("de")}
-          />
 
-          <input
-            className="input"
-            id="ua"
-            type="radio"
-            name="radio"
-            onChange={() => handleLanguageChange("ua")}
-          />
+        <div className="quote-div">
+          <p>
+            Hallo I'm Maryna. I'm a Web-Developer. I'm very passionate and
+            dedicated to my work.
+          </p>
+          <blockquote>
+            <p>
+              <q>Growing old is mandatory, but growing up is optional.</q>
+            </p>
+            <p>
+              <em>—Walt Disney</em>
+            </p>
+          </blockquote>
+        </div>
+        {/* </div> */}
+        <div className="cv">
+          <a
+            href={cvLinks[lang]}
+            className="cv-button"
+            download={`cv-${lang}.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+            alt="cv download"
+          >
+            <MdDownload className="download-icon" />
+          </a>
+          <div className="radio-input">
+            <input
+              defaultChecked
+              className="input"
+              id="en"
+              type="radio"
+              name="radio"
+              onChange={() => handleLanguageChange("en")}
+            />
+            <input
+              className="input"
+              id="de"
+              type="radio"
+              name="radio"
+              onChange={() => handleLanguageChange("de")}
+            />
+
+            <input
+              className="input"
+              id="ua"
+              type="radio"
+              name="radio"
+              onChange={() => handleLanguageChange("ua")}
+            />
+          </div>
         </div>
       </div>
     </div>
