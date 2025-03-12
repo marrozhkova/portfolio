@@ -6,6 +6,7 @@
   justify-content: center;
   overflow: hidden;
   transform: translateY(-5vh);
+
   /* border: 3px solid purple; */
 }
 .wrapper::after {
