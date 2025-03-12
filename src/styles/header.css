@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Maps&display=swap");
 header {
-  flex: 0 0 auto;
   padding: 4rem 0 2rem 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
   z-index: 10;
+  /* border: 1px solid blue; */
 }
 .heading-h2 {
   color: rgb(53, 52, 52);
@@ -121,7 +121,7 @@ header a.heading-h2:after {
   transition: right 0.5s ease; /* Change transition property */
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   header {
     padding: 2rem 0 1rem 0;
   }

@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Coiny&display=swap");
 .skills-container {
   position: relative;
-  width: 100%;
-  height: 100vh;
+  flex: 1 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;

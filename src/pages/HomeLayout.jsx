@@ -10,7 +10,7 @@ const HomeLayout = () => {
     <>
       <div className="main">
         <Header />
-        <Outlet className="outlet" />
+        <Outlet />
         <Footer />
       </div>
     </>

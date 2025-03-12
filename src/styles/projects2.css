@@ -1,13 +1,12 @@
-/* From Uiverse.io by ilkhoeri */
-
 .wrapper {
-  flex: 1 auto;
+  flex: 1;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   transform: translateY(-5vh);
+  /* border: 3px solid purple; */
 }
 .wrapper::after {
   content: "";

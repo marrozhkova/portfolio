@@ -1,5 +1,5 @@
 footer {
-  flex: 0 0 auto;
+  margin-top: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;

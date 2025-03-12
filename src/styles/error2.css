@@ -1,6 +1,6 @@
 .error2 {
-  flex: 1 1 auto;
-  position: relative;
+  flex: 1 auto;
+  height: 100%;
   background-color: rgb(33, 33, 33);
 }
 

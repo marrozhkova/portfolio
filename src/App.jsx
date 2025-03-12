@@ -15,7 +15,6 @@ function App() {
         <Route path="/" element={<HomeInhalt />}>
           <Route index element={<About />} />
           <Route path="projects" element={<Projects2 />} />
-          <Route path="projects2" element={<Projects2 />} />
           <Route path="skills" element={<Skills />} />
           <Route path="404" element={<Error2 />} />
           <Route path="*" element={<Navigate to="/404" replace />} />
