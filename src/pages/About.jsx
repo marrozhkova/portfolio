@@ -5,6 +5,7 @@ import { MdDownload } from "react-icons/md";
 import cvEN from "../assets/data/old.pdf";
 import cvDE from "../assets/data/de.pdf";
 import cvUA from "../assets/data/ua.pdf";
+import foto from "../assets/portfolio-foto/main2.png";
 
 const About = () => {
   const location = useLocation();
@@ -36,11 +37,7 @@ const About = () => {
     <div className="home-container-2" id="about">
       {/* <div className="foto-section"> */}
       <div className="foto-div">
-        <img
-          className="foto"
-          src="src/assets/portfolio-foto/main2.png"
-          alt="portfolio-foto"
-        />
+        <img className="foto" src={foto} alt="portfolio-foto" />
 
         <div className="quote-div">
           <p>
