@@ -36,12 +36,6 @@ const Header = () => {
     window.history.replaceState({}, "", "/");
   };
 
-  const handleCheckboxClick = (e) => {
-    e.stopPropagation();
-    const isChecked = e.target.checked;
-    setIsMenuOpen(isChecked);
-  };
-
   return (
     <header>
       <h2>
@@ -63,13 +57,12 @@ const Header = () => {
         </ul>
       </nav>
       <nav className="small-nav">
-        <label className="cross" onClick={(e) => e.stopPropagation()}>
+        <label className="cross">
           <input
             type="checkbox"
             className="header-check"
             checked={isMenuOpen}
-            onChange={handleCheckboxClick}
-            onClick={(e) => e.stopPropagation()}
+            onChange={(e) => setIsMenuOpen(e.target.checked)}
           />
           <svg viewBox="0 0 32 32">
             <path

@@ -1,6 +1,7 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Folio = () => {
+  const [isMobile, setIsMobile] = useState(false);
   const textRef = useRef(null);
   const img1Ref = useRef(null);
   const img5Ref = useRef(null);
@@ -24,26 +25,56 @@ const Folio = () => {
     const img14 = img14Ref.current;
     const img15 = img15Ref.current;
 
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
     const handleScroll = () => {
-      const value = window.scrollY / 1;
-      text.style.top = `${value * 1}px`;
-      img1.style.top = `${value * 0.2}px`;
-      img5.style.top = `${value * 0.2}px`;
-      img7.style.top = `${value * 0.3}px`;
-      img9.style.top = `${value * 0.1}px`;
-      img11.style.top = `${value * 0.5}px`;
-      img12.style.top = `${value * 1}px`;
-      img13.style.left = `${-(value * 1.2)}px`;
-      img13.style.top = `${-(value * 0.5)}px`;
-      img14.style.left = `${value * 0.5}px`;
-      img14.style.top = `${-(value * 0.5)}px`;
-      img15.style.left = `${value * 1}px`;
-      img15.style.top = `${value * 1.2}px`;
+      const value = window.scrollY / (isMobile ? 2 : 1);
+
+      if (!isMobile) {
+        text.style.top = `${value * 1}px`;
+        img1.style.top = `${value * 0.2}px`;
+        img5.style.top = `${value * 0.2}px`;
+        img7.style.top = `${value * 0.3}px`;
+        img9.style.top = `${value * 0.1}px`;
+        img11.style.top = `${value * 0.5}px`;
+        img12.style.top = `${value * 1}px`;
+        img13.style.left = `${-(value * 1.2)}px`;
+        img13.style.top = `${-(value * 0.5)}px`;
+        img14.style.left = `${value * 0.5}px`;
+        img14.style.top = `${-(value * 0.5)}px`;
+        img15.style.left = `${value * 1}px`;
+        img15.style.top = `${value * 1.2}px`;
+      } else {
+        // Mobile animation values
+        text.style.top = `${value * 0.5}px`;
+        img1.style.top = `${value * 0.1}px`;
+        img5.style.top = `${value * 0.1}px`;
+        img7.style.top = `${value * 0.15}px`;
+        img9.style.top = `${value * 0.05}px`;
+        img11.style.top = `${value * 0.25}px`;
+        img12.style.top = `${value * 0.5}px`;
+        img13.style.left = `${-(value * 0.6)}px`;
+        img13.style.top = `${-(value * 0.25)}px`;
+        img14.style.left = `${value * 0.25}px`;
+        img14.style.top = `${-(value * 0.25)}px`;
+        img15.style.left = `${value * 0.5}px`;
+        img15.style.top = `${value * 0.6}px`;
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    window.addEventListener("resize", checkMobile);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", checkMobile);
+    };
+  }, [isMobile]);
 
   return (
     <div className="home-container-1">
