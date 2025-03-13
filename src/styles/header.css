@@ -123,7 +123,7 @@ header a.heading-h2:after {
 
 @media (max-width: 768px) {
   header {
-    padding: 2rem 0 1rem 0;
+    padding: 1rem 0 1rem 0;
   }
   .heading-h2 {
     font-size: 3rem;

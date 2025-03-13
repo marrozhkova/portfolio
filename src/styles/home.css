@@ -80,6 +80,8 @@
   overflow: hidden;
   width: 100%;
   height: 100vh;
+  will-change: transform;
+  -webkit-overflow-scrolling: touch;
 }
 .heading {
   position: absolute;
@@ -121,12 +123,7 @@
 }
 @media (max-width: 768px) {
   .home-container-1 {
-    overflow-x: hidden;
-    transform: scale(0.8);
-    transform-origin: center top;
-  }
-
-  .heading {
-    font-size: clamp(2rem, 8vw, 4rem);
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
   }
 }

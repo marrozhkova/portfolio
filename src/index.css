@@ -28,3 +28,14 @@ body {
   flex-direction: column;
   /* border: 1px solid red; */
 }
+@media screen and (max-width: 768px) {
+  .main {
+    width: 100%; /* Fix typo from 100wv */
+    overflow-x: hidden; /* Add overflow control */
+    position: fixed; /* Fix mobile scrolling issues */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
