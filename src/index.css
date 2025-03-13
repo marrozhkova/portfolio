@@ -30,11 +30,6 @@ body {
 }
 @media screen and (max-width: 768px) {
   .main {
-    width: 100%; /* Fix typo from 100wv */
-    overflow-x: hidden; /* Add overflow control */
-    position: fixed; /* Fix mobile scrolling issues */
-
-    right: 0;
-    bottom: 0;
+    width: 100vw;
   }
 }
