@@ -1,7 +1,6 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 const Folio = () => {
-  const [scrollY, setScrollY] = useState(0);
   const textRef = useRef(null);
   const img1Ref = useRef(null);
   const img5Ref = useRef(null);
@@ -14,64 +13,37 @@ const Folio = () => {
   const img15Ref = useRef(null);
 
   useEffect(() => {
-    let ticking = false;
-    let touchStartY = 0;
-    let lastScrollY = window.scrollY;
-
-    const updateAnimation = () => {
-      const value = scrollY / 1;
-      if (textRef.current) {
-        textRef.current.style.top = `${value * 1}px`;
-        img1Ref.current.style.top = `${value * 0.2}px`;
-        img5Ref.current.style.top = `${value * 0.2}px`;
-        img7Ref.current.style.top = `${value * 0.3}px`;
-        img9Ref.current.style.top = `${value * 0.1}px`;
-        img11Ref.current.style.top = `${value * 0.5}px`;
-        img12Ref.current.style.top = `${value * 1}px`;
-        img13Ref.current.style.left = `${-(value * 1.2)}px`;
-        img13Ref.current.style.top = `${-(value * 0.5)}px`;
-        img14Ref.current.style.left = `${value * 0.5}px`;
-        img14Ref.current.style.top = `${-(value * 0.5)}px`;
-        img15Ref.current.style.left = `${value * 1}px`;
-        img15Ref.current.style.top = `${value * 1.2}px`;
-      }
-    };
+    const text = textRef.current;
+    const img1 = img1Ref.current;
+    const img5 = img5Ref.current;
+    const img7 = img7Ref.current;
+    const img9 = img9Ref.current;
+    const img11 = img11Ref.current;
+    const img12 = img12Ref.current;
+    const img13 = img13Ref.current;
+    const img14 = img14Ref.current;
+    const img15 = img15Ref.current;
 
     const handleScroll = () => {
-      lastScrollY = window.scrollY;
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          setScrollY(lastScrollY);
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    const handleTouchStart = (e) => {
-      touchStartY = e.touches[0].clientY;
-    };
-
-    const handleTouchMove = (e) => {
-      const touchY = e.touches[0].clientY;
-      const diff = touchStartY - touchY;
-      setScrollY((prev) => Math.max(0, prev + diff));
-      touchStartY = touchY;
+      const value = window.scrollY / 1;
+      text.style.top = `${value * 1}px`;
+      img1.style.top = `${value * 0.2}px`;
+      img5.style.top = `${value * 0.2}px`;
+      img7.style.top = `${value * 0.3}px`;
+      img9.style.top = `${value * 0.1}px`;
+      img11.style.top = `${value * 0.5}px`;
+      img12.style.top = `${value * 1}px`;
+      img13.style.left = `${-(value * 1.2)}px`;
+      img13.style.top = `${-(value * 0.5)}px`;
+      img14.style.left = `${value * 0.5}px`;
+      img14.style.top = `${-(value * 0.5)}px`;
+      img15.style.left = `${value * 1}px`;
+      img15.style.top = `${value * 1.2}px`;
     };
 
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("touchstart", handleTouchStart);
-    window.addEventListener("touchmove", handleTouchMove);
-
-    // Initial animation
-    updateAnimation();
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("touchstart", handleTouchStart);
-      window.removeEventListener("touchmove", handleTouchMove);
-    };
-  }, [scrollY]);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div className="home-container-1">

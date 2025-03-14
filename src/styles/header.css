@@ -72,7 +72,14 @@ header a.heading-h2:after {
     }
   }
   &:has(.header-check:checked) + .small-menu {
-    right: 0;
+    width: fit-content;
+    /* display: flex; */
+    visibility: visible;
+    padding: 0 2rem;
+    opacity: 1;
+    li {
+      display: block;
+    }
   }
   svg {
     height: 3em;
@@ -95,9 +102,6 @@ header a.heading-h2:after {
 }
 .small-nav {
   display: none;
-}
-
-.small-nav {
   flex-direction: column;
   gap: 2rem;
   justify-content: center;
@@ -106,10 +110,12 @@ header a.heading-h2:after {
 .small-menu {
   position: absolute;
   top: 0;
-  right: -100%; /* Change from right: 0 to start off-screen */
-  width: 30%;
+  right: 0;
+  /*right: -100%;  Change from right: 0 to start off-screen */
+  width: 0;
+  /* margin: 0 2rem; */
   min-height: 100vh;
-  padding-left: 5rem;
+
   background: rgba(3, 3, 3, 0.7);
   z-index: 100;
   display: flex;
@@ -118,28 +124,34 @@ header a.heading-h2:after {
   justify-content: center;
   align-items: start;
   list-style: none;
-  transition: right 0.5s ease; /* Change transition property */
+  transition: width 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+  visibility: hidden;
+  opacity: 0;
+  li {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
   header {
     padding: 1rem 0 1rem 0;
+    .main-nav {
+      display: none;
+    }
+    a,
+    a:visited {
+      font-size: 2rem;
+      padding: 1rem 1.5rem;
+    }
   }
   .heading-h2 {
     font-size: 3rem;
   }
-  header .main-nav {
-    display: none;
-  }
+
   .cross {
     display: flex;
   }
   .small-nav {
     display: flex;
-  }
-  header a,
-  header a:visited {
-    font-size: 2rem;
-    padding: 1rem 1.5rem;
   }
 }
