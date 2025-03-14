@@ -59,6 +59,7 @@ const Header = () => {
       <nav className="small-nav">
         <label className="cross">
           <input
+            id="hamburger-check"
             type="checkbox"
             className="header-check"
             checked={isMenuOpen}

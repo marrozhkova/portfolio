@@ -212,7 +212,7 @@
   .cv {
     left: 50%;
     transform: translateX(-50%);
-    top: calc(100% + 40rem);
+    top: calc(100% + 30rem);
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
@@ -240,7 +240,7 @@
   .cv {
     left: 50%;
     transform: translateX(-50%);
-    top: calc(100% + 30rem);
+    top: calc(100% + 25rem);
   }
 }
 @media (min-width: 769px) and (max-width: 992px) {

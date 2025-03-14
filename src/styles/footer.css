@@ -63,8 +63,41 @@ p {
   font-size: 2rem;
   font-weight: bold;
 }
+/* @media screen and (max-width: 768px) {
+  footer {
+    width: 90%;
+    padding: 2rem 0;
+  }
+  .footer-button {
+    width: 4rem;
+    height: 4rem;
+  }
+  .footer-icons {
+    gap: min(3vw, 3vh);
+  }
+  .white-footer {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+} */
 @media (max-width: 992px) {
   footer {
-    padding: 1.5rem 0;
+    width: 90%;
+    padding: 2rem 0;
+  }
+  .footer-button {
+    width: 4rem;
+    height: 4rem;
+  }
+  .footer-icons {
+    gap: min(3vw, 3vh);
+  }
+  .white-footer {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 1.5rem;
   }
 }
