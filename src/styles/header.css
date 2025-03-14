@@ -155,3 +155,16 @@ header a.heading-h2:after {
     display: flex;
   }
 }
+@media (min-width: 769px) and (max-width: 992px) {
+  header {
+    padding: 2rem 0 2rem 0;
+  }
+  .heading-h2 {
+    font-size: 4rem;
+  }
+  a,
+  a:visited {
+    font-size: 2.5rem;
+    padding: 1rem 2rem;
+  }
+}

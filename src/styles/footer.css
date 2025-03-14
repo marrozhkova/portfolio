@@ -1,7 +1,9 @@
 footer {
+  align-self: center;
+  width: 80%;
   margin-top: auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 2.5rem 0;
 }
