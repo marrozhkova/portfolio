@@ -38,11 +38,13 @@ const Skills = () => {
       </div>
       <div className="cube2">
         <div className="big">
-          <span style={{ "--i": 0, "--clr": "#cc810a" }}>React</span>
-          <span style={{ "--i": 1, "--clr": "#b27109" }}>Tailwind</span>
-          <span style={{ "--i": 2, "--clr": "#cc810a" }}>TS</span>
-          <span style={{ "--i": 3, "--clr": "#b27109" }}>ARIA</span>
-          <span className="top" style={{ "--clr": "#cc9544" }}></span>
+          <span style={{ "--i": 0, "--clr": "hsl(35, 90%, 45%)" }}>React</span>
+          <span style={{ "--i": 1, "--clr": "hsl(35, 85%, 40%)" }}>
+            Tailwind
+          </span>
+          <span style={{ "--i": 2, "--clr": "hsl(35, 90%, 45%)" }}>TS</span>
+          <span style={{ "--i": 3, "--clr": "hsl(35, 85%, 40%)" }}>ARIA</span>
+          <span className="top" style={{ "--clr": "hsl(35, 50%, 53%)" }}></span>
         </div>
       </div>
 

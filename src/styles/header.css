@@ -160,11 +160,11 @@ header a.heading-h2:after {
     padding: 2rem 0 2rem 0;
     a,
     a:visited {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       padding: 1rem 2rem;
     }
   }
   .heading-h2 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 }
