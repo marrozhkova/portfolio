@@ -212,6 +212,25 @@ span {
   .skills-list2 {
     right: min(10vw, 10vh);
   }
+  .cube {
+    &:hover .big span {
+      color: #e2e2e2;
+    }
+    &:hover ~ .cube2 .big span {
+      border: min(0.3vw, 0.3vh) solid #e2e2e2;
+    }
+  }
+  .cube2 {
+    &:hover .big span {
+      border: min(0.3vw, 0.3vh) solid #e2e2e2;
+    }
+  }
+  .skills-container h1,
+  .skills-list1,
+  .skills-list2,
+  .cube:has(~ .cube2:hover) .big span {
+    color: #e2e2e2;
+  }
 }
 @media (min-width: 481px) and (max-width: 768px) {
   .skills-list1,
@@ -224,6 +243,25 @@ span {
   }
   .skills-list2 {
     right: min(10vw, 10vh);
+  }
+  .cube {
+    &:hover .big span {
+      color: #e2e2e2;
+    }
+    &:hover ~ .cube2 .big span {
+      border: min(0.3vw, 0.3vh) solid #e2e2e2;
+    }
+  }
+  .cube2 {
+    &:hover .big span {
+      border: min(0.3vw, 0.3vh) solid #e2e2e2;
+    }
+  }
+  .skills-container h1,
+  .skills-list1,
+  .skills-list2,
+  .cube:has(~ .cube2:hover) .big span {
+    color: #e2e2e2;
   }
 }
 

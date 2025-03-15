@@ -1,20 +1,51 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik+Maps&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Rubik+Maps&display=swap"); */
+@font-face {
+  font-family: "RubikDoodleTriangles";
+  src: url("../assets/fonts/RubikDoodleTriangles-Regular.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "RubikMaps";
+  src: url("../assets/fonts/RubikMaps-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RubikMicrobe";
+  src: url("../assets/fonts/RubikMicrobe-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RubikMoonrocks";
+  src: url("../assets/fonts/RubikMoonrocks-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 header {
   padding: 4rem 0 2rem 0;
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   z-index: 10;
-  /* border: 1px solid blue; */
+  border: 1px solid blue;
 }
 .heading-h2 {
-  color: rgb(53, 52, 52);
-  background-color: white;
+  color: rgb(52, 52, 52);
+  /* background-color: white; */
+  /* -webkit-text-stroke: 1px black; */
+  text-shadow: 0 0 2px #000;
   background-clip: text;
-  font-family: "Rubik Maps", system-ui;
+  font-family: "RubikMaps", system-ui;
+  /* font-family: "RubikDoodleTriangles", system-ui; */
+  /* font-family: "RubikMicrobe", system-ui; */
+  /* font-family: "RubikMoonrocks", system-ui; */
+
   font-weight: 400;
   letter-spacing: 0.5rem;
   font-size: 5rem;
+  margin-left: -1rem;
 }
 header .main-menu {
   display: flex;
@@ -31,7 +62,8 @@ header a:visited {
   font-weight: 500;
   position: relative;
   transition: color 0.25s;
-  padding: 1rem 2rem;
+  margin-right: -1rem;
+  padding: 1rem;
   &:hover {
     color: rgb(3, 3, 3);
   }
@@ -73,7 +105,6 @@ header a.heading-h2:after {
   }
   &:has(.header-check:checked) + .small-menu {
     width: fit-content;
-    /* display: flex; */
     visibility: visible;
     padding: 0 2rem;
     opacity: 1;
@@ -86,7 +117,6 @@ header a.heading-h2:after {
     transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
-
 .line {
   fill: none;
   stroke: white;
@@ -110,12 +140,9 @@ header a.heading-h2:after {
 .small-menu {
   position: absolute;
   top: 0;
-  right: 0;
-  /*right: -100%;  Change from right: 0 to start off-screen */
+  right: -2.5%;
   width: 0;
-  /* margin: 0 2rem; */
   min-height: 100vh;
-
   background: rgba(3, 3, 3, 0.7);
   z-index: 100;
   display: flex;
@@ -141,7 +168,7 @@ header a.heading-h2:after {
     a,
     a:visited {
       font-size: 2rem;
-      padding: 1rem 1.5rem;
+      color: #e0e0e0;
     }
   }
   .heading-h2 {
@@ -161,7 +188,6 @@ header a.heading-h2:after {
     a,
     a:visited {
       font-size: 2.2rem;
-      padding: 1rem 2rem;
     }
   }
   .heading-h2 {
