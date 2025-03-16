@@ -161,7 +161,7 @@ header a.heading-h2:after {
   }
   header a::after,
   header a:hover::after {
-    scale: 1 0;
+    scale: 0;
   }
   .cross,
   .cross:hover {
