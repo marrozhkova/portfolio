@@ -99,7 +99,7 @@
     --after-bottom: calc(70vh - var(--h) / 2);
   }
 }
-@media (min-width: 993px) and (max-width: 1200px) {
+@media (min-width: 993px) and (max-width: 1250px) {
   .wrapper,
   .inner {
     --after-bottom: calc(73vh - var(--h) / 2);
