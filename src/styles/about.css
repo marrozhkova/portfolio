@@ -5,15 +5,9 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  /* border: 1px solid red;
-
-  /* gap: 10rem; */
-
-  /* padding-bottom: 10rem; */
 }
 .foto-div {
   margin: 0;
-  border: 1px solid red;
   position: relative;
   background: url("../assets/portfolio-foto/dots1.png") no-repeat center/cover;
   display: flex;
@@ -30,20 +24,10 @@
     width: 70%;
     object-fit: cover;
     border-radius: 1rem;
-    /* filter: grayscale(20%) contrast(110%) brightness(85%); */
     filter: grayscale(80%);
     transition: all 0.3s ease-in-out;
   }
 }
-/* .foto-section {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-
-} */
 @keyframes appear {
   from {
     opacity: 0;
@@ -71,21 +55,21 @@
   left: 120.78%;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  align-items: center;
+  gap: 4rem;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20rem);
   border: 0.1rem solid rgba(255, 255, 255, 0.2);
   border-radius: 1.5rem;
   box-shadow: 0 0.8rem 3.2rem rgba(0, 0, 0, 0.1);
-  padding: 3.5rem 2rem;
+  padding: 3rem;
   transition: all 0.3s ease;
-  &:hover {
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 1.2rem 4rem rgba(0, 0, 0, 0.15);
-  }
   p {
-    font-size: 2.4rem;
-    line-height: 3.1rem;
+    font-size: 3rem;
+    line-height: 4.5rem;
+  }
+  blockquote {
+    padding-left: 3rem;
   }
 }
 .radio-input {
@@ -124,10 +108,10 @@
   }
   &::after {
     position: absolute;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     left: 150%;
     font-size: 1.8rem;
-    color: #c0c0c0;
     transition: none;
   }
 }
@@ -135,7 +119,6 @@
 .input:checked ~ .input:active {
   background-position: 0 -2.4rem;
 }
-
 #de::after {
   content: "DE";
 }
@@ -146,7 +129,6 @@
   content: "UA";
 }
 .cv-button {
-  /* margin-bottom: 1.5rem; */
   width: 25rem;
   height: 9.2rem;
   border: none;
@@ -162,7 +144,6 @@
   );
   background-size: 250%;
   background-position: left;
-  color: #c0c0c0;
   position: relative;
   display: flex;
   align-items: center;
@@ -172,9 +153,7 @@
   &:before {
     position: absolute;
     content: "CV";
-    color: #c0c0c0;
     font-size: 2.5rem;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -189,130 +168,115 @@
 }
 .cv-button .download-icon {
   position: absolute;
-  color: #c0c0c0;
   font-size: 2.5rem;
   transform: translateX(-4rem);
 }
-@media (max-width: 480px) {
-  .home-container-2 {
-    padding-left: 0;
-    justify-content: center;
-    align-items: start;
-    padding-bottom: 30rem;
-  }
-  .foto-div {
-    width: 70%;
-  }
-  .quote-div {
-    top: 95%;
-    left: -10%;
-    width: 120%;
-    z-index: 10;
-    gap: 1rem;
-    margin-top: -1.5rem;
-    z-index: 10;
-    p {
-      font-size: 1.5rem;
-      line-height: 2rem;
-      color: #e2e2e2;
-    }
-  }
-  .input:after {
-    color: #e2e2e2;
-  }
-
-  .cv {
-    left: 50%;
-    transform: translateX(-50%);
-    top: calc(100% + 30rem);
-  }
-  .cv-button {
-    color: #e2e2e2;
-    background: linear-gradient(
-      to right,
-      #2b2b2b,
-      #e2e2e2,
-      #2b2b2b,
-      #2b2b2b,
-      #e2e2e2,
-      #2b2b2b
-    );
-    &:before {
-      color: #e2e2e2;
-    }
-  }
-  .cv-button .download-icon {
-    color: #e2e2e2;
+@media (hover: hover) {
+  .quote-div:hover {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 1.2rem 4rem rgba(0, 0, 0, 0.15);
   }
 }
-@media (min-width: 481px) and (max-width: 768px) {
+@media (hover: none) {
+  .quote-div,
+  .quote-div:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0.8rem 3.2rem rgba(0, 0, 0, 0.1);
+  }
+}
+@media (max-width: 480px) {
   .home-container-2 {
-    padding-left: 0;
     justify-content: center;
-    align-items: start;
-    padding-bottom: 30rem;
+    align-items: center;
+    padding-bottom: 50rem;
   }
   .foto-div {
     width: 70%;
   }
   .quote-div {
-    top: 95%;
-    left: -10%;
-    width: 120%;
+    top: calc(100% + 2.5rem);
+    left: -15%;
+    width: 130%;
     z-index: 10;
-    gap: 1.3rem;
-    padding: 2.5rem 1.4rem;
+    gap: 1.5rem;
+    padding: 1rem;
     p {
-      font-size: 1.8rem;
+      font-size: 2rem;
       line-height: 2.2rem;
-      color: #e2e2e2;
     }
-  }
-  .input:after {
-    color: #e2e2e2;
   }
   .cv {
     left: 50%;
     transform: translateX(-50%);
-    top: calc(100% + 25rem);
+    top: calc(100% + 40rem);
   }
   .cv-button {
-    color: #e2e2e2;
     background: linear-gradient(
       to right,
-      #2c2c2c,
-      #e2e2e2,
-      #2c2c2c,
-      #2c2c2c,
-      #e2e2e2,
-      #2c2c2c
+      #3a3a3a,
+      #f0f0f0,
+      #3a3a3a,
+      #3a3a3a,
+      #f0f0f0,
+      #3a3a3a
     );
-    &:before {
-      color: #e2e2e2;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home-container-2 {
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 45rem;
+  }
+  .foto-div {
+    width: 70%;
+  }
+  .quote-div {
+    top: calc(100% + 2.5rem);
+    left: -15%;
+    width: 130%;
+    z-index: 10;
+    gap: 2rem;
+    padding: 1.5rem;
+    p {
+      font-size: 2.5rem;
+      line-height: 2.8rem;
     }
   }
-  .cv-button .download-icon {
-    color: #e2e2e2;
+  .cv {
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(100% + 35rem);
+  }
+  .cv-button {
+    background: linear-gradient(
+      to right,
+      #3a3a3a,
+      #f0f0f0,
+      #3a3a3a,
+      #3a3a3a,
+      #f0f0f0,
+      #3a3a3a
+    );
   }
 }
 @media (min-width: 769px) and (max-width: 992px) {
-  .home-container-2 {
-    padding-left: 5vw;
-  }
   .quote-div {
-    left: 110%;
-    width: 110%;
-    gap: 1.5rem;
-    padding: 2.8rem 1.4rem;
+    gap: 3rem;
+    padding: 2.5rem 2rem;
     p {
-      font-size: 2.1rem;
-      line-height: 2.5rem;
+      font-size: 2.5rem;
+      line-height: 2.8rem;
     }
   }
-  .foto-div {
-    width: 45%;
-  }
-  .cv {
-    left: 110%;
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .quote-div {
+    gap: 3.5rem;
+    padding: 3rem;
+    p {
+      font-size: 3rem;
+      line-height: 3.2rem;
+    }
   }
 }

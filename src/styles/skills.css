@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Coiny&display=swap");
 .skills-container {
   position: relative;
   flex: 1 auto;
@@ -15,17 +14,15 @@ span {
   font-weight: bold;
 }
 .cube {
-  font-size: min(3vw, 3vh);
+  font-size: min(5.5vw, 5.5vh);
   position: absolute;
-  width: min(25vw, 25vh);
-  height: min(25vw, 25vh);
-  transform: translateY(calc(min(7vw, 7vh)));
-
+  width: min(40vw, 40vh);
+  height: min(40vw, 40vh);
+  transform: translateY(calc(min(11.2vw, 11.2vh)));
   &:hover .big span {
     color: #c0c0c0;
     background: transparent;
     border: min(0.5vw, 0.5vh) solid #b2823c;
-    /* filter: drop-shadow(0 0 0.5vw #cc6a01); */
   }
   &:hover ~ .cube2 .big span {
     color: #cc6a01;
@@ -53,45 +50,42 @@ span {
 }
 .cube .big span {
   position: absolute;
-  width: min(25vw, 25vh);
-  height: min(25vw, 25vh);
+  width: min(40vw, 40vh);
+  height: min(40vw, 40vh);
   background: var(--clr);
-  transform: rotateY(calc(90deg * var(--i))) translateZ(min(12.5vw, 12.5vh));
+  transform: rotateY(calc(90deg * var(--i))) translateZ(min(20vw, 20vh)); /* Half of 40vw */
   transform-style: preserve-3d;
   transition: 0.5s;
 }
 .cube .big span.top {
-  transform: rotateX(90deg) translateZ(min(12.5vw, 12.5vh));
+  transform: rotateX(90deg) translateZ(min(20vw, 20vh));
   &::before {
     content: "";
     position: absolute;
     inset: 0;
-    transform: translateZ(calc(min(29.17vw, 29.17vh) * (-1)));
+    transform: translateZ(calc(min(46.67vw, 46.67vh) * (-1)));
     background: rgba(0, 0, 0, 0.7);
     filter: blur(5vw);
   }
 }
 .cube2 {
-  font-size: min(1.5vw, 1.5vh);
+  font-size: min(4vw, 4vh);
   position: absolute;
-  width: min(10vw, 10vh);
-  height: min(10vw, 10vh);
+  width: min(20vw, 20vh);
+  height: min(20vw, 20vh);
   top: 50%;
   left: 50%;
-
-  transform: translate(-50%, calc(min(17vw, 17vh) * (-1)));
+  transform: translate(-50%, calc(min(29vw, 29vh) * (-1)));
   &:hover .big span {
     color: #cc6a01;
     background: transparent;
     border: min(0.3vw, 0.3vh) solid #c0c0c0;
-    /* filter: drop-shadow(0 0 0.3vw #c0c0c0); */
   }
 }
 .cube:has(~ .cube2:hover) .big span {
   color: #c0c0c0;
   background: transparent;
   border: min(0.5vw, 0.5vh) solid #b2823c;
-  /* filter: drop-shadow(0 0 min(0.5vw, 0.5vh) #cc6a01); */
 }
 .cube2 div {
   position: absolute;
@@ -113,32 +107,23 @@ span {
 }
 .cube2 .big span {
   position: absolute;
-  width: min(10vw, 10vh);
-  height: min(10vw, 10vh);
+  width: min(20vw, 20vh);
+  height: min(20vw, 20vh);
   background: var(--clr);
-  transform: rotateY(calc(90deg * var(--i))) translateZ(min(5vw, 5vh));
+  transform: rotateY(calc(90deg * var(--i))) translateZ(min(10vw, 10vh)); /* Half of 20vw */
   transform-style: preserve-3d;
   transition: 0.5s;
 }
 .cube2 .big span.top {
-  transform: rotateX(90deg) translateZ(min(5vw, 5vh));
+  transform: rotateX(90deg) translateZ(min(10vw, 10vh));
   &::before {
     content: "";
     position: absolute;
     inset: 0;
-    transform: translateZ(calc(min(11.67vw, 11.67vh) * (-1)));
+    transform: translateZ(calc(min(23.34vw, 23.34vh) * (-1)));
     background: rgba(0, 0, 0, 0.5);
     filter: blur(2.5vw);
   }
-}
-.skills-container h1 {
-  position: absolute;
-  top: 0;
-  color: #c0c0c0;
-  text-align: center;
-  font-size: 8rem;
-  padding: 5rem;
-  margin: auto;
 }
 .skills-list1,
 .skills-list2 {
@@ -154,51 +139,34 @@ span {
 .skills-list1 li,
 .skills-list2 li {
   height: fit-content;
-
+  width: 0;
+  max-width: 0;
   opacity: 0;
   visibility: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: calc(var(--j) * 0.1s);
 }
 .skills-list1 {
-  left: min(20vw, 20vh);
-  top: min(25vw, 25vh);
+  left: calc(min(40vw, 40vh) - min(40vw, 40vh) / 2);
+  top: 50vh;
+  transform: translateY(-50%);
 }
 .skills-list2 {
-  right: min(20vw, 20vh);
-  top: min(8vw, 8vh);
+  right: calc(min(20vw, 20vh) / 2 + min(20vw, 20vh));
+  top: 45%;
+  transform: translate(0, calc(min(29vw, 29vh) * (-1)));
 }
 .cube2:hover ~ .skills-list1 li,
-.cube:hover ~ .skills-list1 li {
-  visibility: visible;
-  animation: li-animate1 1s ease-out forwards;
-  animation-delay: calc(var(--j) * 0.2s);
-}
-
+.cube:hover ~ .skills-list1 li,
 .cube2:hover ~ .skills-list2 li,
 .cube:hover ~ .skills-list2 li {
+  width: 100%;
+  max-width: 100%;
   visibility: visible;
-  animation: li-animate2 1.5s ease-out forwards;
-  animation-delay: calc(var(--j) * 0.2s);
-}
-@keyframes li-animate1 {
-  0% {
-    transform: translateX(-100vw);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes li-animate2 {
-  0% {
-    transform: translateX(100vw);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+  opacity: 1;
+  transition-delay: calc(var(--j) * 0.5s);
 }
 @media (max-width: 480px) {
   .skills-list1,
@@ -235,14 +203,14 @@ span {
 @media (min-width: 481px) and (max-width: 768px) {
   .skills-list1,
   .skills-list2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     line-height: 3.5rem;
   }
   .skills-list1 {
-    left: min(10vw, 10vh);
+    left: calc(min(25vw, 25vh) - min(40vw, 40vh) / 2);
   }
   .skills-list2 {
-    right: min(10vw, 10vh);
+    right: calc(min(18vw, 18vh) - min(20vw, 20vw) / 2);
   }
   .cube {
     &:hover .big span {
@@ -257,12 +225,6 @@ span {
       border: min(0.3vw, 0.3vh) solid #e2e2e2;
     }
   }
-  .skills-container h1,
-  .skills-list1,
-  .skills-list2,
-  .cube:has(~ .cube2:hover) .big span {
-    color: #e2e2e2;
-  }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
@@ -272,9 +234,22 @@ span {
     line-height: 4rem;
   }
   .skills-list1 {
-    left: min(15vw, 15vh);
+    left: calc(min(25vw, 25vh) - min(40vw, 40vh) / 2);
   }
   .skills-list2 {
-    right: min(15vw, 15vh);
+    right: calc(min(18vw, 18vh) - min(20vw, 20vw) / 2);
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .skills-list1,
+  .skills-list2 {
+    font-size: 3rem;
+    line-height: 4.5rem;
+  }
+  .skills-list1 {
+    left: calc(min(30vw, 30vh) - min(40vw, 40vh) / 2);
+  }
+  .skills-list2 {
+    right: calc(min(20vw, 20vh) - min(20vw, 20vw) / 2);
   }
 }

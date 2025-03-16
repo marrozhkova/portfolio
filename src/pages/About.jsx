@@ -15,7 +15,6 @@ const About = () => {
       const aboutSection = document.getElementById("about");
       if (aboutSection) {
         aboutSection.scrollIntoView({ behavior: "smooth" });
-        // Clean up the state
         window.history.replaceState(
           {},
           document.title,
@@ -35,7 +34,6 @@ const About = () => {
   };
   return (
     <div className="home-container-2" id="about">
-      {/* <div className="foto-section"> */}
       <div className="foto-div">
         <img className="foto" src={foto} alt="portfolio-foto" />
 
@@ -53,7 +51,6 @@ const About = () => {
             </p>
           </blockquote>
         </div>
-        {/* </div> */}
         <div className="cv">
           <a
             href={cvLinks[lang]}

@@ -47,7 +47,6 @@ const Skills = () => {
           <span className="top" style={{ "--clr": "hsl(35, 50%, 53%)" }}></span>
         </div>
       </div>
-
       <ul className="skills-list1">
         <li style={{ "--j": 0 }}>JavaScript</li>
         <li style={{ "--j": 1 }}>HTML</li>
