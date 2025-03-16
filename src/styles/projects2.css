@@ -11,7 +11,7 @@
   --translateZ: calc((var(--w) + var(--h)) / 2);
   --rotateX: -15deg;
   --perspective: 200rem;
-  --after-bottom: calc(75vh - var(--h) / 2);
+  --after-bottom: calc(77vh - var(--h) / 2);
 }
 .wrapper::after {
   content: "";
@@ -93,15 +93,21 @@
     --after-bottom: calc(65vh - var(--h) / 2);
   }
 }
-@media (min-width: 481px) and (max-width: 992px) {
-  .wrapper,
-  .inner {
-    --after-bottom: calc(70vh - var(--h) / 2);
-  }
-}
-@media (min-width: 993px) and (max-width: 1250px) {
+@media (min-width: 481px) and (max-width: 768px) {
   .wrapper,
   .inner {
     --after-bottom: calc(73vh - var(--h) / 2);
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .wrapper,
+  .inner {
+    --after-bottom: calc(74vh - var(--h) / 2);
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .wrapper,
+  .inner {
+    --after-bottom: calc(75vh - var(--h) / 2);
   }
 }
