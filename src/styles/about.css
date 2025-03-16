@@ -208,7 +208,7 @@
   .cv {
     left: 50%;
     transform: translateX(-50%);
-    top: calc(100% + 40rem);
+    top: calc(100% + 25rem);
   }
   .cv-button {
     width: 20rem;
@@ -247,7 +247,7 @@
   .cv {
     left: 50%;
     transform: translateX(-50%);
-    top: calc(100% + 35rem);
+    top: calc(100% + 25rem);
   }
   .cv-button {
     width: 20rem;
