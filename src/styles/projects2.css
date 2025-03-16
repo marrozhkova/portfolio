@@ -11,17 +11,18 @@
   --translateZ: calc((var(--w) + var(--h)) / 2);
   --rotateX: -15deg;
   --perspective: 200rem;
-  --after-bottom: calc(55vh - var(--h) / 2);
+  --after-bottom: calc(75vh - var(--h) / 2);
 }
 .wrapper::after {
   content: "";
   position: absolute;
   width: calc(var(--translateZ) * 3);
-  height: calc(var(--translateZ) * 1.5);
+  height: calc(var(--translateZ) * 0.7);
   top: var(--after-bottom);
   left: 50%;
   transform: translateX(-50%);
-  background: url("../assets/portfolio-foto/dots2.png") no-repeat center/contain;
+  background: url("../assets/portfolio-foto/dots2-resize.png") no-repeat center
+    bottom/contain;
   filter: grayscale(20%);
   z-index: -1;
 }
@@ -85,11 +86,22 @@
       rotateY(1turn);
   }
 }
-@media (min-width: 481px) and (max-width: 1220px) {
+
+@media (max-width: 480px) {
   .wrapper,
   .inner {
-    --h: min(40vw, 40vh);
-    --w: min(26.67vw, 26.67vh);
-    --after-bottom: calc(50vh - var(--h) / 2);
+    --after-bottom: calc(65vh - var(--h) / 2);
+  }
+}
+@media (min-width: 481px) and (max-width: 992px) {
+  .wrapper,
+  .inner {
+    --after-bottom: calc(70vh - var(--h) / 2);
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .wrapper,
+  .inner {
+    --after-bottom: calc(73vh - var(--h) / 2);
   }
 }
