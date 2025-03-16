@@ -1,33 +1,9 @@
-import { useEffect, useRef, useState } from "react";
-import { useLocation } from "react-router-dom";
 import "../styles/skills.css";
 
 const Skills = () => {
-  const skillsRef = useRef(null);
-  const location = useLocation();
-  const [isActive, setIsActive] = useState(false);
-
-  const handleCubeInteraction = (e) => {
-    e.preventDefault(); // Prevent default scroll behavior
-    setIsActive((prev) => !prev);
-  };
-
-  useEffect(() => {
-    if (location.pathname === "/skills") {
-      window.scrollTo({
-        top: document.documentElement.scrollHeight,
-        behavior: "smooth",
-      });
-    }
-  }, [location]);
-
   return (
-    <div className="skills-container" ref={skillsRef}>
-      <div
-        className={`cube ${isActive ? "active" : ""}`}
-        onClick={handleCubeInteraction}
-        onTouchStart={(e) => e.stopPropagation()}
-      >
+    <div className="skills-container">
+      <div className="cube">
         <div className="big">
           <span style={{ "--i": 0, "--clr": "#b4b4b4" }}>JS</span>
           <span style={{ "--i": 1, "--clr": "#c0c0c0" }}>HTML</span>
