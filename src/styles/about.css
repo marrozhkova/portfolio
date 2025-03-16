@@ -188,7 +188,7 @@
   .home-container-2 {
     justify-content: center;
     align-items: center;
-    padding-bottom: 50rem;
+    padding-bottom: 40rem;
   }
   .foto-div {
     width: 70%;
@@ -211,6 +211,7 @@
     top: calc(100% + 40rem);
   }
   .cv-button {
+    width: 20rem;
     background: linear-gradient(
       to right,
       #3a3a3a,
@@ -226,7 +227,7 @@
   .home-container-2 {
     justify-content: center;
     align-items: center;
-    padding-bottom: 45rem;
+    padding-bottom: 40rem;
   }
   .foto-div {
     width: 70%;
@@ -249,6 +250,7 @@
     top: calc(100% + 35rem);
   }
   .cv-button {
+    width: 20rem;
     background: linear-gradient(
       to right,
       #3a3a3a,
@@ -261,6 +263,9 @@
   }
 }
 @media (min-width: 769px) and (max-width: 992px) {
+  .cv-button {
+    width: 20rem;
+  }
   .quote-div {
     gap: 1.5rem;
     padding: 1rem;
