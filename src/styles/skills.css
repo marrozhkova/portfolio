@@ -149,12 +149,12 @@ span {
   transition-delay: calc(var(--j) * 0.1s);
 }
 .skills-list1 {
-  left: calc(min(40vw, 40vh) - min(40vw, 40vh) / 2);
+  right: calc(50vw + (min(50vw, 50vh)) / 2);
   top: 50vh;
   transform: translateY(-50%);
 }
 .skills-list2 {
-  right: calc(min(20vw, 20vh) / 2 + min(20vw, 20vh));
+  left: calc(50vw + (min(50vw, 50vh)) / 2);
   top: 45%;
   transform: translate(0, calc(min(29vw, 29vh) * (-1)));
 }
@@ -171,14 +171,14 @@ span {
 @media (max-width: 480px) {
   .skills-list1,
   .skills-list2 {
-    font-size: 1.2rem;
+    font-size: 2rem;
     line-height: 3rem;
   }
   .skills-list1 {
-    left: min(10vw, 10vh);
+    right: calc(52vw + (min(50vw, 50vh)) / 2);
   }
   .skills-list2 {
-    right: min(10vw, 10vh);
+    left: calc(52vw + (min(50vw, 50vh)) / 2);
   }
   .cube {
     &:hover .big span {
@@ -207,10 +207,10 @@ span {
     line-height: 3.5rem;
   }
   .skills-list1 {
-    left: calc(min(25vw, 25vh) - min(40vw, 40vh) / 2);
+    right: calc(52vw + (min(50vw, 50vh)) / 2);
   }
   .skills-list2 {
-    right: calc(min(18vw, 18vh) - min(20vw, 20vw) / 2);
+    left: calc(52vw + (min(50vw, 50vh)) / 2);
   }
   .cube {
     &:hover .big span {
@@ -226,18 +226,11 @@ span {
     }
   }
 }
-
 @media (min-width: 769px) and (max-width: 992px) {
   .skills-list1,
   .skills-list2 {
     font-size: 2.5rem;
     line-height: 4rem;
-  }
-  .skills-list1 {
-    left: calc(min(25vw, 25vh) - min(40vw, 40vh) / 2);
-  }
-  .skills-list2 {
-    right: calc(min(18vw, 18vh) - min(20vw, 20vw) / 2);
   }
 }
 @media (min-width: 993px) and (max-width: 1200px) {
@@ -245,11 +238,5 @@ span {
   .skills-list2 {
     font-size: 3rem;
     line-height: 4.5rem;
-  }
-  .skills-list1 {
-    left: calc(min(30vw, 30vh) - min(40vw, 40vh) / 2);
-  }
-  .skills-list2 {
-    right: calc(min(20vw, 20vh) - min(20vw, 20vw) / 2);
   }
 }
