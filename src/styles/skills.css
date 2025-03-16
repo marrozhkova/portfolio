@@ -171,7 +171,7 @@ span {
 @media (max-width: 480px) {
   .skills-list1,
   .skills-list2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 3rem;
   }
   .skills-list1 {

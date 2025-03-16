@@ -13,10 +13,7 @@
   padding: 0;
   box-sizing: border-box;
   color: #d0d0d0;
-  /* font-family: "a_FuturicaLt Thin"; */
-
   font-family: "Josefin Sans", sans-serif;
-  /* font-family: "JosefinSans-Regular", sans-serif; */
   font-optical-sizing: auto;
 }
 :root {
@@ -29,12 +26,8 @@ body {
   background-color: rgb(33, 33, 33);
   min-height: 100vh;
   width: 100%;
-
-  /* font-family: "Josefin Sans", sans-serif; */
-
   overflow-x: hidden;
   justify-content: center;
-  /* border: 1px solid red; */
 }
 #root {
   display: flex;
@@ -43,7 +36,6 @@ body {
   justify-content: center;
   width: 100%;
   height: 100%;
-  /* border: 1px solid red; */
 }
 .main {
   position: relative;
@@ -51,8 +43,6 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-
-  border: 1px solid purple;
 }
 @media screen and (max-width: 1200px) {
   .main {

@@ -20,9 +20,9 @@ const Error = () => {
 
   useEffect(() => {
     function raining() {
-      let absolute = document.querySelector(".absolute"); // Fixed class name
+      let absolute = document.querySelector(".absolute");
       let e = document.createElement("div");
-      e.className = "error-rain"; // This is correct for createElement
+      e.className = "error-rain";
       e.innerText = "404";
 
       if (absolute) {

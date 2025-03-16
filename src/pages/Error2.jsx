@@ -25,7 +25,7 @@ const Error2 = () => {
           state: { scrollToAbout: true },
         }
       );
-    }, 7000);
+    }, 5000);
     return () => {
       clearTimeout(redirect);
     };

@@ -6,18 +6,24 @@
   justify-content: center;
   overflow: hidden;
   transform: translateY(-5vh);
-
-  /* border: 3px solid purple; */
+  --w: min(30vw, 30vh);
+  --h: min(45vw, 45vh);
+  --translateZ: calc((var(--w) + var(--h)) / 2);
+  --rotateX: -15deg;
+  --perspective: 200rem;
+  /* Calculate bottom position based on viewport height, card height and perspective */
+  --after-bottom: calc(55vh - var(--h) / 2);
 }
 .wrapper::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
-  filter: grayscale(20%);
-  width: 100%;
-  height: 45vh;
+  width: calc(var(--translateZ) * 3);
+  height: calc(var(--translateZ) * 1.5);
+  top: var(--after-bottom);
+  left: 50%;
+  transform: translateX(-50%);
   background: url("../assets/portfolio-foto/dots2.png") no-repeat center/contain;
+  filter: grayscale(20%);
   z-index: -1;
 }
 .inner {
