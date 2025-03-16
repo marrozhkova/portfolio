@@ -66,15 +66,14 @@ header a:visited {
     content: "";
     position: absolute;
     inset: 0;
-    background: #d0d0d0;
     z-index: -1;
     scale: 1 0;
     border-radius: 1rem;
     transition: 0.45s;
   }
 }
-header a.heading-h2:after {
-  background: #cc810a;
+header a:hover::after {
+  scale: 1 1;
 }
 .active {
   border-bottom: #cc810a 0.2rem solid;
@@ -150,22 +149,22 @@ header a.heading-h2:after {
   header a:hover {
     color: rgb(3, 3, 3);
   }
-  header a:hover::after {
-    scale: 1 1;
+  header a::after {
+    background: #d0d0d0;
+  }
+  header a.heading-h2:after {
+    background: #cc810a;
   }
 }
 @media (hover: none) {
-  header a,
   header a:hover {
-    color: #d0d0d0;
+    color: #e0e0e0;
   }
-  header a::after,
-  header a:hover::after {
-    scale: 0;
+  header a::after {
+    background: none;
   }
-  .cross,
-  .cross:hover {
-    cursor: default;
+  header a.heading-h2:after {
+    background: none;
   }
 }
 @media (max-width: 768px) {
