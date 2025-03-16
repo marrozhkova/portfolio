@@ -1,7 +1,6 @@
 .wrapper {
   flex: 1;
   position: relative;
-  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,28 +11,21 @@
   --translateZ: calc((var(--w) + var(--h)) / 2);
   --rotateX: -15deg;
   --perspective: 200rem;
-  --after-bottom: calc(74vh - var(--h) / 2);
 }
 .wrapper::after {
+  z-index: -1;
   content: "";
   position: absolute;
   width: calc(var(--translateZ) * 3);
   height: calc(var(--translateZ) * 0.7);
-  top: var(--after-bottom);
+  top: 62%;
   left: 50%;
   transform: translateX(-50%);
   background: url("../assets/portfolio-foto/dots2-resize.png") no-repeat center
     bottom/contain;
   filter: grayscale(20%);
-  z-index: 10;
 }
 .inner {
-  z-index: 20;
-  --w: min(30vw, 30vh);
-  --h: min(45vw, 45vh);
-  --translateZ: calc((var(--w) + var(--h)) / 2);
-  --rotateX: -15deg;
-  --perspective: 200rem;
   position: absolute;
   width: var(--w);
   height: var(--h);
@@ -42,7 +34,6 @@
   animation: rotating 20s linear infinite;
 }
 .card {
-  z-index: 15;
   position: absolute;
   border: 2px solid rgb(3, 3, 3);
   border-radius: 1rem;
@@ -89,28 +80,13 @@
       rotateY(1turn);
   }
 }
-
-@media (max-width: 480px) {
-  .wrapper,
-  .inner {
-    --after-bottom: calc(65vh - var(--h) / 2);
+@media (max-width: 468px) {
+  .wrapper::after {
+    top: 55%;
   }
 }
-@media (min-width: 481px) and (max-width: 768px) {
-  .wrapper,
-  .inner {
-    --after-bottom: calc(73vh - var(--h) / 2);
-  }
-}
-@media (min-width: 769px) and (max-width: 992px) {
-  .wrapper,
-  .inner {
-    --after-bottom: calc(73vh - var(--h) / 2);
-  }
-}
-@media (min-width: 993px) and (max-width: 1300px) {
-  .wrapper,
-  .inner {
-    --after-bottom: calc(73vh - var(--h) / 2);
+@media (max-width: 768px) {
+  .wrapper::after {
+    top: 58%;
   }
 }
