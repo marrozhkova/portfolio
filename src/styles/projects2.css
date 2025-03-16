@@ -85,7 +85,7 @@
       rotateY(1turn);
   }
 }
-@media (min-width: 481px) and (max-width: 1200px) {
+@media (min-width: 481px) and (max-width: 1220px) {
   .wrapper,
   .inner {
     --h: min(40vw, 40vh);
