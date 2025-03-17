@@ -16,11 +16,9 @@
   font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
 }
-:root {
-  font-size: 62.5%;
-}
 html {
   scroll-behavior: smooth;
+  font-size: 62.5%;
 }
 body {
   background-color: rgb(33, 33, 33);

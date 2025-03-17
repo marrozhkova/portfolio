@@ -130,10 +130,10 @@ span {
   position: absolute;
   list-style: none;
   color: #c0c0c0;
-  font-size: 3rem;
+  font-size: 2rem;
   height: fit-content;
   width: fit-content;
-  line-height: 5rem;
+  line-height: 3.5rem;
   visibility: hidden;
 }
 .skills-list1 li,
@@ -171,8 +171,8 @@ span {
 @media (max-width: 480px) {
   .skills-list1,
   .skills-list2 {
-    font-size: 1.5rem;
-    line-height: 3rem;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
   }
   .skills-list1 {
     right: calc(52vw + (min(50vw, 50vh)) / 2);
@@ -203,8 +203,8 @@ span {
 @media (min-width: 481px) and (max-width: 768px) {
   .skills-list1,
   .skills-list2 {
-    font-size: 2.5rem;
-    line-height: 3.5rem;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
   }
   .skills-list1 {
     right: calc(52vw + (min(50vw, 50vh)) / 2);
@@ -229,14 +229,14 @@ span {
 @media (min-width: 769px) and (max-width: 992px) {
   .skills-list1,
   .skills-list2 {
-    font-size: 2.5rem;
-    line-height: 4rem;
+    font-size: 2rem;
+    line-height: 3rem;
   }
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   .skills-list1,
   .skills-list2 {
-    font-size: 3rem;
-    line-height: 4.5rem;
+    font-size: 2rem;
+    line-height: 3rem;
   }
 }
