@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import "../styles/about.css";
 import { MdDownload } from "react-icons/md";
-import cvEN from "../assets/data/old.pdf";
-import cvDE from "../assets/data/de.pdf";
-import cvUA from "../assets/data/ua.pdf";
+import cvEN from "../assets/data/Rozhkova-en.pdf";
+import cvDE from "../assets/data/Rozhkova-de.pdf";
+import cvUA from "../assets/data/Rozhkova-ua.pdf";
 import foto from "../assets/portfolio-foto/main2.png";
 
 const About = () => {
