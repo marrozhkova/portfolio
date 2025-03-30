@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import "../styles/folio.css";
 
 const Folio = () => {
   const textRef = useRef(null);

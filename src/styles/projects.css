@@ -1,78 +1,92 @@
-.project-container {
-  flex: 1 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  padding: 2rem;
-  background-color: rgb(33, 33, 33);
-}
-
-.project-card {
+.wrapper {
+  flex: 1;
   position: relative;
-  width: 100%;
-  max-width: 33%;
-  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
+  transform: translateY(-5vh);
+  --w: min(30vw, 30vh);
+  --h: min(45vw, 45vh);
+  --translateZ: calc((var(--w) + var(--h)) / 2);
+  --rotateX: -15deg;
+  --perspective: 200rem;
 }
-.bright-image-1:hover,
-.bright-image-2:hover,
-.bright-image-3:hover,
-.bright-image-4:hover {
-  filter: none;
-  transform: scale(1.2);
-}
-/* Individual project cards */
-.bright-image-1,
-.bright-image-2,
-.bright-image-3,
-.bright-image-4 {
+.wrapper::after {
+  z-index: -1;
+  content: "";
   position: absolute;
-  inset: 0;
-  z-index: 1;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-  filter: grayscale(80%) blur(1px);
+  width: calc(var(--translateZ) * 3);
+  height: calc(var(--translateZ) * 0.7);
+  top: 62%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url("../assets/portfolio-foto/dots2-resize.png") no-repeat center
+    bottom/contain;
+  filter: grayscale(20%);
 }
-
-.bright-image-1 {
-  background: url(../assets/projects/2.png) no-repeat center/cover;
-  -webkit-mask-image: url(../assets/projects/i1.png);
-  mask-image: url(../assets/projects/i1.png);
-}
-
-.bright-image-2 {
-  background: url(../assets/projects/3.png) no-repeat center/cover;
-  -webkit-mask-image: url(../assets/projects/i2.png);
-  mask-image: url(../assets/projects/i2.png);
-}
-
-.bright-image-3 {
-  background: url(../assets/projects/4.png) no-repeat center/cover;
-  -webkit-mask-image: url(../assets/projects/i3.png);
-  mask-image: url(../assets/projects/i3.png);
-}
-
-.bright-image-4 {
-  background: url(../assets/projects/5.png) no-repeat center/cover;
-  -webkit-mask-image: url(../assets/projects/i4.png);
-  mask-image: url(../assets/projects/i4.png);
-}
-
-.blot-mask {
+.inner {
   position: absolute;
+  width: var(--w);
+  height: var(--h);
+  transform-style: preserve-3d;
+  transform: perspective(var(--perspective));
+  animation: rotating 20s linear infinite;
+}
+.card {
+  position: absolute;
+  border: 2px solid rgb(3, 3, 3);
+  border-radius: 1rem;
+  overflow: hidden;
   inset: 0;
-  background-color: rgb(33, 33, 33);
+  transform: rotateY(calc((360deg / var(--quantity)) * var(--index)))
+    translateZ(var(--translateZ));
+}
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  mix-blend-mode: screen;
+  filter: grayscale(80%);
+  &:hover {
+    opacity: 1;
+    filter: none;
+  }
+}
+.img1 {
+  background: url("../assets/projects/1.png") center/cover;
+}
+.img2 {
+  background: url("../assets/projects/2.png") center/cover;
+}
+.img3 {
+  background: url("../assets/projects/3.png") center/cover;
+}
+.img4 {
+  background: url("../assets/projects/4.png") left/cover;
+}
+.img5 {
+  background: url("../assets/projects/5.png") center/cover;
 }
 
-/* Responsive design */
+@keyframes rotating {
+  from {
+    transform: perspective(var(--perspective)) rotateX(var(--rotateX))
+      rotateY(0);
+  }
+  to {
+    transform: perspective(var(--perspective)) rotateX(var(--rotateX))
+      rotateY(1turn);
+  }
+}
+@media (max-width: 468px) {
+  .wrapper::after {
+    top: 55%;
+  }
+}
 @media (max-width: 768px) {
-  .project-card {
-    max-width: 90%;
+  .wrapper::after {
+    top: 58%;
   }
 }

@@ -8,16 +8,25 @@ const Header = () => {
 
   useEffect(() => {
     const closeMenu = (e) => {
-      // Close if clicking outside menu and checkbox
       if (!e.target.closest(".small-menu") && !e.target.closest(".cross")) {
         setIsMenuOpen(false);
         const checkbox = document.querySelector(".header-check");
         if (checkbox) checkbox.checked = false;
       }
     };
-
+    const handleEscKey = (event) => {
+      if (event.key === "Escape") {
+        setIsMenuOpen(false);
+        const checkbox = document.querySelector(".header-check");
+        if (checkbox) checkbox.checked = false;
+      }
+    };
     document.addEventListener("click", closeMenu);
-    return () => document.removeEventListener("click", closeMenu);
+    document.addEventListener("keydown", handleEscKey);
+    return () => {
+      document.removeEventListener("keydown", handleEscKey);
+      document.removeEventListener("click", closeMenu);
+    };
   }, []);
 
   const handleMenuItemClick = () => {
@@ -32,7 +41,6 @@ const Header = () => {
       top: 0,
       behavior: "smooth",
     });
-    // Update URL without hashtag
     window.history.replaceState({}, "", "/");
   };
 

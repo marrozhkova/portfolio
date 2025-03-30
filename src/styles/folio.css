@@ -1,0 +1,221 @@
+@font-face {
+  font-family: "RubikMaps";
+  src: local("RubikMaps"),
+    url("../assets/fonts/RubikMaps-Regular.woff2") format("woff2"),
+    url("../assets/fonts/RubikMaps-Regular.woff") format("woff"),
+    url("../assets/fonts/RubikMaps-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+000-5FF;
+}
+.home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+}
+.home,
+.heading {
+  transition: all 0.3s linear;
+  color: black;
+}
+
+@supports (background-image: image-set(url() 1x)) {
+  .home-1 {
+    background-image: -webkit-image-set(
+      url(../assets/home/1.webp) 1x,
+      url(../assets/home/1.png) 1x
+    );
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
+  }
+
+  .home-2 {
+    background-image: -webkit-image-set(
+      url(../assets/home/2.webp) 1x,
+      url(../assets/home/2.png) 1x
+    );
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: contain;
+  }
+
+  .home-3 {
+    background-image: -webkit-image-set(
+      url(../assets/home/3.webp) 1x,
+      url(../assets/home/3.png) 1x
+    );
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
+  }
+
+  .home-4 {
+    background-image: -webkit-image-set(
+      url(../assets/home/4.webp) 1x,
+      url(../assets/home/4.png) 1x
+    );
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+  }
+
+  .home-5 {
+    background-image: -webkit-image-set(
+      url(../assets/home/5.webp) 1x,
+      url(../assets/home/5.png) 1x
+    );
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+  }
+
+  .home-6 {
+    background-image: -webkit-image-set(
+      url(../assets/home/6.webp) 1x,
+      url(../assets/home/6.png) 1x
+    );
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: contain;
+  }
+
+  .home-7 {
+    background-image: -webkit-image-set(
+      url(../assets/home/7.webp) 1x,
+      url(../assets/home/7.png) 1x
+    );
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+  }
+
+  .home-8 {
+    background-image: -webkit-image-set(
+      url(../assets/home/8.webp) 1x,
+      url(../assets/home/8.png) 1x
+    );
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+  }
+
+  .home-9 {
+    background-image: -webkit-image-set(
+      url(../assets/home/9.webp) 1x,
+      url(../assets/home/9.png) 1x
+    );
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+  }
+
+  .home-10 {
+    background-image: -webkit-image-set(
+      url(../assets/home/10.webp) 1x,
+      url(../assets/home/10.png) 1x
+    );
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: contain;
+  }
+
+  .home-11 {
+    background-image: -webkit-image-set(
+      url(../assets/home/11.webp) 1x,
+      url(../assets/home/11.png) 1x
+    );
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: contain;
+  }
+
+  .home-12 {
+    background-image: -webkit-image-set(
+      url(../assets/home/12.webp) 1x,
+      url(../assets/home/12.png) 1x
+    );
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+  }
+
+  .home-13 {
+    background-image: -webkit-image-set(
+      url(../assets/home/13.webp) 1x,
+      url(../assets/home/13.png) 1x
+    );
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+  }
+
+  .home-14 {
+    background-image: -webkit-image-set(
+      url(../assets/home/14.webp) 1x,
+      url(../assets/home/14.png) 1x
+    );
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+  }
+
+  .home-15 {
+    background-image: -webkit-image-set(
+      url(../assets/home/15.webp) 1x,
+      url(../assets/home/15.png) 1x
+    );
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: contain;
+  }
+}
+.home-container-1 {
+  background-color: rgb(3, 3, 3);
+  flex: 1 auto;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+.heading {
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  background-clip: text;
+  transform: translateY(35vh);
+  left: 0;
+  width: 100%;
+  font-family: "RubikMaps", system-ui;
+  font-feature-settings: "kern" 1, "liga" 0;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.5rem;
+  font-size: 10vw;
+  text-align: center;
+  color: rgb(129, 129, 129);
+}
+@media (max-width: 480px) {
+  .home-container-1 {
+    background-color: rgb(44, 44, 44);
+  }
+  .heading {
+    font-size: 13vw;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .home-container-1 {
+    background-color: rgb(44, 44, 44);
+  }
+  .heading {
+    font-size: 13vw;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .heading {
+    font-size: 13vw;
+  }
+}

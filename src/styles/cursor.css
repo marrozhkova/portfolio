@@ -18,11 +18,7 @@
   top: 0;
   left: 0;
   transform: translate(-50%, -50%);
-  /* Added explicit dimensions */
-  /* min-height: initial;
-  max-height: initial; */
 }
-
 .cursor-dot {
   width: 8px;
   height: 8px;
@@ -30,13 +26,11 @@
   mix-blend-mode: difference;
   z-index: 10000;
 }
-
 .cursor-outline {
   width: 40px;
   height: 40px;
   border: 2px solid rgba(255, 255, 255, 0.5);
 }
-
 /* Show default cursor */
 a,
 .footer-button,

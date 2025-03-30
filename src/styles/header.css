@@ -32,14 +32,10 @@ header {
 }
 .heading-h2 {
   color: rgb(52, 52, 52);
-  /* background-color: white; */
-  /* -webkit-text-stroke: 1px black; */
+  background-color: white;
   text-shadow: 0 0 2px #000;
   background-clip: text;
   font-family: "RubikMaps", system-ui;
-  /* font-family: "RubikDoodleTriangles", system-ui; */
-  /* font-family: "RubikMicrobe", system-ui; */
-  /* font-family: "RubikMoonrocks", system-ui; */
   font-weight: 400;
   letter-spacing: 0.5rem;
   font-size: 3.5rem;

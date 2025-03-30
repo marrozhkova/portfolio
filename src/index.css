@@ -1,13 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
-
-@font-face {
-  font-family: "a_FuturicaLt Thin";
-  src: url("../assets/fonts/a_FuturicaLt Thin.ttf") format("truetype");
-}
-/* @font-face {
-  font-family: "JosefinSans-Regular";
-  src: url("../assets/fonts/JosefinSans-Regular.ttf") format("truetype");
-} */
 * {
   margin: 0;
   padding: 0;
@@ -38,7 +29,7 @@ body {
 .main {
   position: relative;
   width: 80%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }

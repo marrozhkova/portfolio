@@ -13,10 +13,7 @@ const Cursor = () => {
     };
 
     const onMouseMove = (e) => {
-      // Dot follows cursor immediately
       setDotPosition({ x: e.clientX, y: e.clientY });
-
-      // Outline follows with delay
       setTimeout(() => {
         setOutlinePosition({ x: e.clientX, y: e.clientY });
       }, 100);
