@@ -5,11 +5,13 @@ const Cursor = () => {
   const [dotPosition, setDotPosition] = useState({ x: 0, y: 0 });
   const [outlinePosition, setOutlinePosition] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
+  const [isDesktop, setIsDesktop] = useState(
+    window.matchMedia("(hover: hover)").matches
+  );
 
   useEffect(() => {
     const handleResize = () => {
-      setIsDesktop(window.innerWidth > 768);
+      setIsDesktop(window.matchMedia("(hover: hover)").matches);
     };
 
     const onMouseMove = (e) => {
