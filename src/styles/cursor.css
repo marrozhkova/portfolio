@@ -43,6 +43,6 @@ a,
   .cursor-wrapper,
   .cursor-dot,
   .cursor-outline {
-    display: none;
+    display: none !important;
   }
 }
