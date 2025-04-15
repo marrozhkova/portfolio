@@ -30,21 +30,20 @@ const Projects = () => {
             </a>
           </div>
           <div className="card" style={{ "--index": 2 }}>
-            <a
-              href="https://marrozhkova.github.io/the-very-first-projekt/"
-              target="_blank"
-            >
+            <a href="https://neoromorphism.vercel.app" target="_blank">
               <div className="img img3"></div>
             </a>
           </div>
           <div className="card" style={{ "--index": 3 }}>
-            <a href="#">
-              {" "}
+            <a href="https://eurovision-ua.vercel.app/">
               <div className="img img4"></div>
             </a>
           </div>
           <div className="card" style={{ "--index": 4 }}>
-            <a href="https://eurovision-ua.vercel.app/" target="_blank">
+            <a
+              href="https://marrozhkova.github.io/the-very-first-projekt/"
+              target="_blank"
+            >
               <div className="img img5"></div>
             </a>
           </div>
