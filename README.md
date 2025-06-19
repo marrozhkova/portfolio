@@ -36,7 +36,6 @@ This project represents my skills, style, and values as a developer. It also ser
 |--------------|-------------|
 | ![Desktop Screenshot](./P-desktop.png) | ![Mobile Screenshot](./P-mobile.png) |
 
-> *(Optional: Add screenshots to the `/screenshots` folder to enable this section.)*
 
 ---
 
