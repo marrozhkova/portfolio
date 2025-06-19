@@ -1,12 +1,44 @@
-# React + Vite
+# 🌐 Maryna Rozhkova — Web Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my **personal portfolio website**, built to showcase my development projects, design skills, and academic background. The goal: minimalism, clarity, and a mobile-first experience with personality.
 
-Currently, two official plugins are available:
+🔗 **Live demo**: [https://marrozhkova-portfolio.vercel.app/](https://marrozhkova-portfolio.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 💡 Features
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 📱 **Responsive Design** — mobile-first, 468px optimized
+- 🧑‍💻 **About Me**, **Projects**, and **Contact** sections
+- 🖼️ Highlighted works with links to live demos and GitHub repos
+- 🎨 Clean UI with soft animations and modern typography
+- 🌙 Dark theme visual styling
+
+---
+
+## 🧑‍💻 Tech Stack
+
+- **React** (Functional Components)
+- **CSS Modules** (component-scoped styles)
+- **Vite** (lightweight bundler)
+- **Deployed via Vercel**
+
+---
+
+## 📸 Screenshots
+
+| Desktop View | Mobile View |
+|--------------|-------------|
+| ![Desktop Screenshot](./P-desktop.png) | ![Mobile Screenshot](./P-mobile.png) |
+
+> *(Optional: Add screenshots to the `/screenshots` folder to enable this section.)*
+
+---
+
+## 🛠️ Local Setup
+
+```bash
+git clone https://github.com/marrozhkova/portfolio.git
+cd portfolio
+npm install
+npm run dev
