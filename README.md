@@ -16,6 +16,11 @@ This is my **personal portfolio website**, built to showcase my development proj
 
 ---
 
+## 🎯 Purpose
+This project represents my skills, style, and values as a developer. It also serves as a sandbox to experiment with layout patterns and visual storytelling. It's an evolving space — I update it as my journey continues.
+
+---
+
 ## 🧑‍💻 Tech Stack
 
 - **React** (Functional Components)
@@ -42,3 +47,12 @@ git clone https://github.com/marrozhkova/portfolio.git
 cd portfolio
 npm install
 npm run dev
+```
+---
+
+## 👤 Author
+
+**Maryna Rozhkova**  
+Frontend Developer | Learner by Heart  
+📫 [mar.rozhkova@gmail.com](mailto:mar.rozhkova@gmail.com)  
+🌐 [Portfolio](https://marrozhkova-portfolio.vercel.app/)
