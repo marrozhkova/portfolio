@@ -4,9 +4,9 @@
   position: absolute;
   width: 60vmin;
   height: 60vmin;
-  top: 20vmin;
-  align-self: center;
-  justify-self: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .sphere {

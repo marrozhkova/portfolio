@@ -213,7 +213,7 @@
 }
 @media (min-width: 481px) and (max-width: 768px) {
   .home-container-1 {
-    background-color: rgb(44, 44, 44);
+    background-color: #24160a;
   }
   .heading {
     font-size: 13vw;
