@@ -43,7 +43,7 @@ footer {
   content: "";
   width: 100%;
   height: 100%;
-  background: #181818;
+  background: #3a2e23;
   z-index: -1;
   border-radius: 0.4rem;
   pointer-events: none;

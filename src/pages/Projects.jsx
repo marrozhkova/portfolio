@@ -20,12 +20,12 @@ const Projects = () => {
       <div className="wrapper" ref={projectsRef}>
         <div className="inner" style={{ "--quantity": 5 }}>
           <div className="card" style={{ "--index": 0 }}>
-            <a href="#">
+            <a href="https://radio-app-five.vercel.app/" target="_blank">
               <div className="img img1"></div>
             </a>
           </div>
           <div className="card" style={{ "--index": 1 }}>
-            <a href="#">
+            <a href="https://quizzly-bears.vercel.app/" target="_blank">
               <div className="img img2"></div>
             </a>
           </div>

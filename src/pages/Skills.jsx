@@ -1,42 +1,35 @@
 import "../styles/skills.css";
 
-const Skills = () => {
+const Projects1 = () => {
   return (
-    <div className="skills-container">
-      <div className="cube">
-        <div className="big">
-          <span style={{ "--i": 0, "--clr": "#b4b4b4" }}>JS</span>
-          <span style={{ "--i": 1, "--clr": "#c0c0c0" }}>HTML</span>
-          <span style={{ "--i": 2, "--clr": "#b4b4b4" }}>CSS</span>
-          <span style={{ "--i": 3, "--clr": "#c0c0c0" }}>GIT</span>
-          <span className="top" style={{ "--clr": "#e4e4e4" }}></span>
+    <div className="scene">
+      <div className="sphere">
+        <div className="hemisphere">
+          <div className="face">JavaScript</div>
+          <div className="face">HTML</div>
+          <div className="face">CSS</div>
+          <div className="face">GIT</div>
+          <div className="face">TypeScript</div>
+          <div className="face">Bootstrap</div>
+          <div className="face">Node JS</div>
+          <div className="face">Socket IO</div>
+          <div className="face">Firebase</div>
+          <div className="face">MongoDB</div>
+        </div>
+        <div className="hemisphere">
+          <div className="face">React</div>
+          <div className="face">Tailwind</div>
+          <div className="face">Express</div>
+          <div className="face">ARIA</div>
+          <div className="face">React Native</div>
+          <div className="face">Vite</div>
+          <div className="face">EXPO</div>
+          <div className="face">Clerk</div>
+          <div className="face">React</div>
+          <div className="face">Figma</div>
         </div>
       </div>
-      <div className="cube2">
-        <div className="big">
-          <span style={{ "--i": 0, "--clr": "hsl(35, 90%, 45%)" }}>React</span>
-          <span style={{ "--i": 1, "--clr": "hsl(35, 85%, 40%)" }}>
-            Tailwind
-          </span>
-          <span style={{ "--i": 2, "--clr": "hsl(35, 90%, 45%)" }}>TS</span>
-          <span style={{ "--i": 3, "--clr": "hsl(35, 85%, 40%)" }}>ARIA</span>
-          <span className="top" style={{ "--clr": "hsl(35, 50%, 53%)" }}></span>
-        </div>
-      </div>
-      <ul className="skills-list1">
-        <li style={{ "--j": 0 }}>JavaScript</li>
-        <li style={{ "--j": 1 }}>HTML</li>
-        <li style={{ "--j": 2 }}>CSS</li>
-        <li style={{ "--j": 3 }}>Git</li>
-      </ul>
-      <ul className="skills-list2">
-        <li style={{ "--j": 0 }}>React</li>
-        <li style={{ "--j": 1 }}>Tailwind</li>
-        <li style={{ "--j": 2 }}>TypeScript</li>
-        <li style={{ "--j": 3 }}>ARIA</li>
-      </ul>
     </div>
   );
 };
-
-export default Skills;
+export default Projects1;
