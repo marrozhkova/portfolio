@@ -29,7 +29,7 @@
   left: 0%;
   background: radial-gradient(
       circle farthest-corner at 33% 33%,
-      rgba(240, 240, 220, 0.85) 0%,
+      #ffe8cc 0%,
       rgba(30, 30, 40, 0.85) 80%
     ),
     radial-gradient(
@@ -104,7 +104,7 @@
   height: 20%;
   top: 40%;
   left: 40%;
-  background: hsla(28, 95%, 60%, 0.116);
+  background: #3a2e23;
   /* background: rgba(0, 0, 0, 0.2);  */
   transform: translateZ(2.1vmin);
 }
