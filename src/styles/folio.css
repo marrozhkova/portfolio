@@ -175,7 +175,6 @@
   }
 }
 .home-container-1 {
-  /* background-color: rgb(75, 75, 75); */
   background-color: #24160a;
   flex: 1 auto;
   position: relative;
@@ -185,36 +184,22 @@
 }
 .heading {
   position: absolute;
-  /* background-color: rgb(0, 0, 0);
-  background-clip: text; */
   transform: translateY(35vh);
   left: 0;
   width: 100%;
-  /* font-family: "RubikMaps", system-ui; */
-  /* font-family: "Quicksand", sans-serif; */
   font-family: "Baloo 2", sans-serif;
-  /* font-feature-settings: "kern" 1, "liga" 0; */
   font-weight: 900;
-  /* font-weight: 400; */
-  /* -webkit-font-smoothing: antialiased; */
   letter-spacing: 0.5rem;
   font-size: 10vw;
   text-align: center;
   color: #d0d0d0;
-  /* color: rgb(129, 129, 129); */
 }
 @media (max-width: 480px) {
-  .home-container-1 {
-    background-color: rgb(44, 44, 44);
-  }
   .heading {
     font-size: 13vw;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
-  .home-container-1 {
-    background-color: #24160a;
-  }
   .heading {
     font-size: 13vw;
   }

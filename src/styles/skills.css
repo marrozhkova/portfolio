@@ -175,3 +175,8 @@
     transform: rotateZ(25deg) rotateX(20deg) rotateY(360deg);
   }
 }
+@media screen and (max-width: 992px) {
+  .face {
+    font-size: 20px;
+  }
+}
